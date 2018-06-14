@@ -9,4 +9,5 @@ class Application
       resp.write search_item.price
     else
       resp.write "Error"
+    end
 end
