@@ -10,4 +10,5 @@ class Application
     else
       resp.write "Error"
     end
+  end
 end
