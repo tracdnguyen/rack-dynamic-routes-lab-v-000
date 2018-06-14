@@ -5,7 +5,10 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match (/items/)
-      resp.write "price"
+      item_name = req.path.split("/items/").last
+      if item = @@items.include?(item_name)
+        resp.write item.price
+      end
     else
       resp.write "Error"
     end
